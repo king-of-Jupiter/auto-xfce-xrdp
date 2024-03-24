@@ -24,3 +24,21 @@ ResultInactive=no
 ResultActive=yes
 
 E0F
+
+desktop_file="/home/sammy/Desktop/google-chrome.desktop"
+
+cat <<EOT > $desktop_file
+[Desktop Entry]
+Version=1.0
+Name=Google Chrome
+Exec=/usr/bin/google-chrome-stable %U
+StartupNotify=true
+Terminal=false
+Icon=google-chrome
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;
+Actions=new-window;new-private-window;
+EOT
+
+chmod 755 $desktop_file
