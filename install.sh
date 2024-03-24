@@ -1,4 +1,5 @@
 #!/bin/sh
+apt -y remove needrestart
 sudo useradd -m sammy
 echo "sammy:sammy" | sudo chpasswd
 usermod -aG sudo sammy
